@@ -1,0 +1,53 @@
+```css
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+#customUrlsTextarea {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    color: #00f;
+    border-radius: 5px;
+    resize: vertical;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#saveLinksButton {
+    background-color: #4CAF50;
+}
+
+#loadLinksButton {
+    background-color: #008CBA;
+}
+
+#clearLinksButton {
+    background-color: #f44336;
+}
+
+#loadNgrokButton {
+    background-color: #e91e63;
+}
+
+#saveNgrokButton {
+    background-color: #9c27b0;
+}
+
+#addLinkButton {
+    background-color: #3f51b5;
+    margin-right: 5px;
+}
+```

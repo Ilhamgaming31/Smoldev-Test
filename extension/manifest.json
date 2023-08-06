@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Quality of Life Extension for Colab, Hugging Face, and CivitAI",
+  "version": "1.0",
+  "description": "An extension that enhances the functionality of Google Colab, Hugging Face, and CivitAI websites by providing Quality of Life (QOL) improvements for managing and accessing links.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://huggingface.co/*"],
+      "js": ["content_scripts/huggingface.js"]
+    },
+    {
+      "matches": ["https://civitai.com/*"],
+      "js": ["content_scripts/civitai.js"]
+    },
+    {
+      "matches": ["https://colab.research.google.com/github/*"],
+      "js": ["content_scripts/colab.js", "content_scripts/ngrok.js", "content_scripts/mutation_observer.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon16.png",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "storage",
+    "https://huggingface.co/*",
+    "https://civitai.com/*",
+    "https://colab.research.google.com/github/*"
+  ]
+}
